@@ -39,6 +39,8 @@ public final class DragonBreathHandler {
     private static final int HEAT_INTERVAL_BASE = 10;
     /** 寻找龙煅炉的搜索半径（格）。 */
     private static final double FORGE_SEARCH_RADIUS = 2.0D;
+    /** 能够加热龙煅炉的最低龙首等级。 */
+    private static final int MIN_FORGE_HEATING_STAGE = 4;
 
     /** 龙首持久化数据中记录加热冷却的键。 */
     private static final String PULSE_TAG = "CreateIceAndFireBreathPulse";
@@ -93,7 +95,9 @@ public final class DragonBreathHandler {
         }
         data.putInt(PULSE_TAG, cooldown);
 
-        emitBreath(level, skullPos, flow, breath, emit);
+        // 只有四级及以上的成年龙首才够格给龙煅炉加热，其余效果不受等级限制
+        boolean forgeGrade = skull.getStage() >= MIN_FORGE_HEATING_STAGE;
+        emitBreath(level, skullPos, flow, breath, emit, forgeGrade);
     }
 
     /**
@@ -104,11 +108,12 @@ public final class DragonBreathHandler {
      * @param flow 气流方向与风速
      * @param breath 龙息类型
      * @param emit 本次是否应当结算效果
+     * @param forgeGrade 该龙首的等级是否足以加热龙煅炉
      */
     private static void emitBreath(ServerLevel level, BlockPos origin, BreathFlow flow, DragonBreathType breath,
-                                   boolean emit) {
+                                   boolean emit, boolean forgeGrade) {
         int range = CommonConfig.STREAM_RANGE.get();
-        boolean heating = CommonConfig.ENABLE_FORGE_HEATING.get();
+        boolean heating = forgeGrade && CommonConfig.ENABLE_FORGE_HEATING.get();
         boolean griefing = CommonConfig.TRANSFORM_BLOCKS.get()
                 && level.getGameRules().getBoolean(GameRules.RULE_MOBGRIEFING);
         double power = 0.05D * Mth.clamp(flow.speed() / 32.0D, 1.0D, 8.0D);
