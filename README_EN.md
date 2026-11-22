@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A small mod that connects *Ice and Fire: Dragons* with *Create*.
+Use a Create Encased Fan to speed up the Ice and Fire Dragon Forge.
 An Ice and Fire dragon forge only works while a tamed dragon breathes fire on it — hard to arrange, and it takes up a lot of space. Create already has a complete encased fan airflow system, and Ice and Fire already has dragon skulls. Put the two together and a skull becomes a fan catalyst: blow air through a dragon skull lying in the airflow and the stream turns into dragon breath.
 So you no longer need to raise a dragon. Place a skull in the airflow and you get fire, ice or lightning breath, which you can use to heat dragon forges, scorch whatever stands in the stream and corrode the blocks along it. The scope is deliberately narrow: only the "skull + encased fan + dragon forge" line, no new machines, blocks or items.
 Requirements: Minecraft 1.21.1, NeoForge 21.1 or newer, Create 6.0.10 or newer, Ice and Fire: Dragons (CE edition).
