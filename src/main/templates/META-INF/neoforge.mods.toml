@@ -8,7 +8,7 @@ version="${mod_version}"
 displayName="${mod_name}"
 authors="ChinaEX123"
 description='''
-Use Ice and Fire dragon skulls as Create Encased Fan catalysts. Blow air through a placed dragon skull and it breathes fire, frost or lightning: it crafts items with Ice and Fire's dragonforge recipes, heats matching dragon forges and harms whatever stands in the airflow.
+Use Ice and Fire dragon skulls as Create Encased Fan catalysts. Blow air through a placed dragon skull and it breathes fire, frost or lightning: it heats the matching dragon forge, corrodes blocks and harms whatever stands in the airflow.
 '''
 
 [[mixins]]

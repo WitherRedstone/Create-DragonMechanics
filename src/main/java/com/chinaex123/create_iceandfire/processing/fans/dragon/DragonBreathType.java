@@ -1,7 +1,6 @@
 package com.chinaex123.create_iceandfire.processing.fans.dragon;
 
 import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.init.FanRecipeType;
 import com.chinaex123.create_iceandfire.processing.fans.FanCommonType;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.iafenvoy.iceandfire.registry.IafMobEffects;
@@ -58,7 +57,6 @@ public abstract class DragonBreathType extends FanCommonType {
     /**
      * 构造龙息处理类型。
      *
-     * @param recipeType     对应配方类型入口
      * @param dragonTypeId   龙类型标识
      * @param airflowColor   气流颜色
      * @param breathColor    龙息颜色
@@ -66,10 +64,9 @@ public abstract class DragonBreathType extends FanCommonType {
      * @param priority       处理优先级
      * @param breathSound    龙息音效供应器
      */
-    protected DragonBreathType(FanRecipeType.RecipeTypeEntry recipeType, String dragonTypeId,
+    protected DragonBreathType(String dragonTypeId,
                                int airflowColor, int breathColor, ParticleOptions breathParticle,
                                int priority, Supplier<SoundEvent> breathSound) {
-        super(recipeType);
         this.dragonTypeId = dragonTypeId;
         this.airflowColor = airflowColor;
         this.breathColor = breathColor;

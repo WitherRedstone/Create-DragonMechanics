@@ -22,8 +22,8 @@ public class CreateIceAndFire {
     public CreateIceAndFire(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener((RegisterEvent event) -> FanType.init());
         modEventBus.addListener(CIBCapabilities::registerCapabilities);
-        modContainer.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
         NeoForge.EVENT_BUS.addListener(DragonBreathHandler::onLevelTick);
+        modContainer.registerConfig(ModConfig.Type.COMMON, CommonConfig.SPEC);
     }
 
     public static ResourceLocation id(String path) {

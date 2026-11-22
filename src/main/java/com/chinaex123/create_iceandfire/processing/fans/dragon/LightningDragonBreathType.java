@@ -1,7 +1,6 @@
 package com.chinaex123.create_iceandfire.processing.fans.dragon;
 
 import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.init.FanRecipeType;
 import com.chinaex123.create_iceandfire.processing.fans.FanProcessingSounds;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.iafenvoy.iceandfire.entity.util.dragon.IafDragonDestructionManager;
@@ -36,7 +35,7 @@ public final class LightningDragonBreathType extends DragonBreathType {
      * 构造闪电龙息处理类型。
      */
     public LightningDragonBreathType() {
-        super(FanRecipeType.LIGHTNING_DRAGON_FORGE, "lightning", AIRFLOW_COLOR, BREATH_COLOR,
+        super("lightning", AIRFLOW_COLOR, BREATH_COLOR,
                 ParticleTypes.ELECTRIC_SPARK, 2003, IafSounds.LIGHTNINGDRAGON_BREATH);
     }
 

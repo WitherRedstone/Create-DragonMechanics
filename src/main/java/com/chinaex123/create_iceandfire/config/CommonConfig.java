@@ -9,7 +9,6 @@ public final class CommonConfig {
     public static final ModConfigSpec.BooleanValue ENABLE_ICE_DRAGON_BREATH_FAN;
     public static final ModConfigSpec.BooleanValue ENABLE_LIGHTNING_DRAGON_BREATH_FAN;
 
-    public static final ModConfigSpec.BooleanValue ENABLE_ITEM_PROCESSING;
     public static final ModConfigSpec.BooleanValue ENABLE_FORGE_HEATING;
     public static final ModConfigSpec.IntValue FULL_BREATH_RPM;
     public static final ModConfigSpec.IntValue STREAM_RANGE;
@@ -39,10 +38,6 @@ public final class CommonConfig {
         builder.pop();
 
         builder.comment("鼓风机处理").push("Fan processing");
-        ENABLE_ITEM_PROCESSING = builder
-                .comment("是否允许鼓风机按冰与火龙煅炉配方加工物品")
-                .comment("Whether the fan may craft items using Ice and Fire's dragon forge recipes")
-                .define("enableItemProcessing", true);
         ENABLE_FORGE_HEATING = builder
                 .comment("是否让龙息射流加热龙煅炉输入方块(需要龙首与龙煅炉属性相同)")
                 .comment("Whether the breath jet heats a dragon forge input block (element must match)")

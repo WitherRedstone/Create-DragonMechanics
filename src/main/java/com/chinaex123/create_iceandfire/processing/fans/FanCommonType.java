@@ -1,10 +1,7 @@
 package com.chinaex123.create_iceandfire.processing.fans;
 
-import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.init.FanRecipeType;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.simibubi.create.content.kinetics.fan.processing.FanProcessingType;
-import com.simibubi.create.foundation.recipe.RecipeApplier;
 import net.createmod.catnip.theme.Color;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.DustParticleOptions;
@@ -23,35 +20,14 @@ import java.util.List;
 /**
  * 鼓风机处理类型公共基类。
  * <p>
- * 在机械动力的鼓风机处理类型之上，统一处理配置开关、物品配方加工与实体效果分发：
- * 物品按所属配方类型查找并应用配方，实体效果仅由服务端分发给子类的活体处理方法。
+ * 在机械动力的鼓风机处理类型之上，统一处理配置开关与实体效果分发：
+ * 实体效果仅由服务端分发给子类的活体处理方法。
  * 同时提供粒子生成、气流外观变换以及龙首催化剂的查找工具方法。
  */
 public abstract class FanCommonType implements FanProcessingType {
 
     /** 查找最近龙首的搜索半径（格）。 */
     private static final double SKULL_SEARCH_RADIUS = 12.0D;
-
-    /** 对应的配方类型入口。 */
-    private final FanRecipeType.RecipeTypeEntry recipeType;
-
-    /**
-     * 构造鼓风机处理类型基类。
-     *
-     * @param recipeType 对应的配方类型入口
-     */
-    protected FanCommonType(FanRecipeType.RecipeTypeEntry recipeType) {
-        this.recipeType = recipeType;
-    }
-
-    /**
-     * 获取对应的配方类型入口。
-     *
-     * @return 配方类型入口
-     */
-    protected FanRecipeType.RecipeTypeEntry recipeType() {
-        return recipeType;
-    }
 
     /**
      * 判断该鼓风机处理是否启用。
@@ -61,40 +37,31 @@ public abstract class FanCommonType implements FanProcessingType {
     protected abstract boolean isFanProcessingEnabled();
 
     /**
-     * 判断物品能否被处理。
+     * 本模组的龙息不加工物品。
      * <p>
-     * 需启用该处理与物品加工配置，且能在配方类型中找到匹配配方。
+     * 物品加工只能由冰与火自己的龙煅炉完成，气流只负责加热炉子，
+     * 因此这里始终返回 false。
      *
      * @param stack 物品堆叠
      * @param level 世界
-     * @return 可处理返回 true
+     * @return 始终返回 false
      */
     @Override
     public boolean canProcess(ItemStack stack, Level level) {
-        if (!isFanProcessingEnabled() || !CommonConfig.ENABLE_ITEM_PROCESSING.get()) {
-            return false;
-        }
-        return recipeType.find(stack, level).isPresent();
+        return false;
     }
 
     /**
-     * 处理物品。
-     * <p>
-     * 未启用时返回 null；否则查找匹配配方并应用，产出处理结果。
+     * 本模组的龙息不产出物品。
      *
      * @param stack 物品堆叠
      * @param level 世界
-     * @return 处理结果，无法处理时返回 null
+     * @return 始终返回 null
      */
     @Nullable
     @Override
     public List<ItemStack> process(ItemStack stack, Level level) {
-        if (!isFanProcessingEnabled()) {
-            return null;
-        }
-        return recipeType.find(stack, level)
-                .map(recipe -> RecipeApplier.applyRecipeOn(level, stack, recipe, false))
-                .orElse(null);
+        return null;
     }
 
     /**
