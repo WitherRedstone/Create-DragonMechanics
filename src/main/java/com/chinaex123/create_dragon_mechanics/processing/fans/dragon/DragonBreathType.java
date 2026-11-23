@@ -1,7 +1,7 @@
-package com.chinaex123.create_iceandfire.processing.fans.dragon;
+package com.chinaex123.create_dragon_mechanics.processing.fans.dragon;
 
-import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.processing.fans.FanCommonType;
+import com.chinaex123.create_dragon_mechanics.config.CommonConfig;
+import com.chinaex123.create_dragon_mechanics.processing.fans.FanCommonType;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.iafenvoy.iceandfire.registry.IafMobEffects;
 import net.minecraft.core.BlockPos;
@@ -14,7 +14,6 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;

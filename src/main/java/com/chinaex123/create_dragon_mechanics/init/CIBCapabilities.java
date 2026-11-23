@@ -1,6 +1,6 @@
-package com.chinaex123.create_iceandfire.init;
+package com.chinaex123.create_dragon_mechanics.init;
 
-import com.chinaex123.create_iceandfire.compat.DragonForgeItemHandler;
+import com.chinaex123.create_dragon_mechanics.compat.DragonForgeItemHandler;
 import com.iafenvoy.iceandfire.item.block.DragonForgeBrickBlock;
 import com.iafenvoy.iceandfire.item.block.entity.DragonForgeBlockEntity;
 import com.iafenvoy.iceandfire.item.block.entity.DragonForgeBrickBlockEntity;

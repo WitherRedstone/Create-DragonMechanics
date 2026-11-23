@@ -1,7 +1,7 @@
-package com.chinaex123.create_iceandfire.processing.fans.dragon;
+package com.chinaex123.create_dragon_mechanics.processing.fans.dragon;
 
-import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.processing.fans.FanProcessingSounds;
+import com.chinaex123.create_dragon_mechanics.config.CommonConfig;
+import com.chinaex123.create_dragon_mechanics.processing.fans.FanProcessingSounds;
 import com.iafenvoy.iceandfire.entity.util.dragon.IafDragonDestructionManager;
 import com.iafenvoy.iceandfire.particle.DragonFrostParticleType;
 import com.iafenvoy.iceandfire.registry.IafDamageTypes;

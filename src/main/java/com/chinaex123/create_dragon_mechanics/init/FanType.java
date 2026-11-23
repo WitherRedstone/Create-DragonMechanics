@@ -1,10 +1,10 @@
-package com.chinaex123.create_iceandfire.init;
+package com.chinaex123.create_dragon_mechanics.init;
 
-import com.chinaex123.create_iceandfire.CreateIceAndFire;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.DragonBreathType;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.FireDragonBreathType;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.IceDragonBreathType;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.LightningDragonBreathType;
+import com.chinaex123.create_dragon_mechanics.CreateDragonMechanics;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.DragonBreathType;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.FireDragonBreathType;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.IceDragonBreathType;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.LightningDragonBreathType;
 import com.simibubi.create.api.registry.CreateBuiltInRegistries;
 import com.simibubi.create.content.kinetics.fan.processing.FanProcessingType;
 import net.minecraft.core.Registry;
@@ -36,7 +36,7 @@ public final class FanType {
      * @return 注册后的处理类型
      */
     private static <T extends FanProcessingType> T register(String name, T type) {
-        return Registry.register(CreateBuiltInRegistries.FAN_PROCESSING_TYPE, CreateIceAndFire.id(name), type);
+        return Registry.register(CreateBuiltInRegistries.FAN_PROCESSING_TYPE, CreateDragonMechanics.id(name), type);
     }
 
     /**

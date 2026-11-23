@@ -1,4 +1,4 @@
-package com.chinaex123.create_iceandfire.config;
+package com.chinaex123.create_dragon_mechanics.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 

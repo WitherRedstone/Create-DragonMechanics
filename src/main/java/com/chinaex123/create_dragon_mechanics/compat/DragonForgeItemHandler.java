@@ -1,4 +1,4 @@
-package com.chinaex123.create_iceandfire.compat;
+package com.chinaex123.create_dragon_mechanics.compat;
 
 import com.iafenvoy.iceandfire.registry.IafItems;
 import net.minecraft.world.Container;

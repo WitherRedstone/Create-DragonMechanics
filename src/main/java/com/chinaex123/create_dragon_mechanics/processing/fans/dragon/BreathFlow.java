@@ -1,4 +1,4 @@
-package com.chinaex123.create_iceandfire.processing.fans.dragon;
+package com.chinaex123.create_dragon_mechanics.processing.fans.dragon;
 
 import net.minecraft.core.Direction;
 

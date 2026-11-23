@@ -1,7 +1,7 @@
-package com.chinaex123.create_iceandfire.processing.fans.dragon;
+package com.chinaex123.create_dragon_mechanics.processing.fans.dragon;
 
-import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.init.FanType;
+import com.chinaex123.create_dragon_mechanics.config.CommonConfig;
+import com.chinaex123.create_dragon_mechanics.init.FanType;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.iafenvoy.iceandfire.item.block.entity.DragonForgeBlockEntity;
 import com.iafenvoy.iceandfire.item.block.entity.DragonForgeInputBlockEntity;
@@ -16,7 +16,6 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.Mth;
 import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import org.jetbrains.annotations.Nullable;

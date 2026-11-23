@@ -1,9 +1,8 @@
-package com.chinaex123.create_iceandfire.client;
+package com.chinaex123.create_dragon_mechanics.client;
 
-import com.chinaex123.create_iceandfire.CreateIceAndFire;
-import com.chinaex123.create_iceandfire.config.CommonConfig;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.BreathFlow;
-import com.chinaex123.create_iceandfire.processing.fans.dragon.DragonBreathHandler;
+import com.chinaex123.create_dragon_mechanics.config.CommonConfig;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.BreathFlow;
+import com.chinaex123.create_dragon_mechanics.processing.fans.dragon.DragonBreathHandler;
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.iafenvoy.iceandfire.render.misc.LightningBoltData;
 import com.iafenvoy.iceandfire.render.misc.LightningRenderer;

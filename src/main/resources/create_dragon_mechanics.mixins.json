@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.chinaex123.create_iceandfire.mixin",
+  "package": "com.chinaex123.create_dragon_mechanics.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
   "injectors": {

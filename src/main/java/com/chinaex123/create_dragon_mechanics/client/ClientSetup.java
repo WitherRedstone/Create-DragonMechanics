@@ -1,6 +1,6 @@
-package com.chinaex123.create_iceandfire.client;
+package com.chinaex123.create_dragon_mechanics.client;
 
-import com.chinaex123.create_iceandfire.CreateIceAndFire;
+import com.chinaex123.create_dragon_mechanics.CreateDragonMechanics;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -10,7 +10,7 @@ import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.common.NeoForge;
 
-@Mod(value = CreateIceAndFire.MODID, dist = Dist.CLIENT)
+@Mod(value = CreateDragonMechanics.MODID, dist = Dist.CLIENT)
 public class ClientSetup {
 
     public ClientSetup(ModContainer container) {

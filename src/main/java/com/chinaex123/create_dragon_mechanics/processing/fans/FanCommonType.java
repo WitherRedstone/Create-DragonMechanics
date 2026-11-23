@@ -1,4 +1,4 @@
-package com.chinaex123.create_iceandfire.processing.fans;
+package com.chinaex123.create_dragon_mechanics.processing.fans;
 
 import com.iafenvoy.iceandfire.entity.DragonSkullEntity;
 import com.simibubi.create.content.kinetics.fan.processing.FanProcessingType;

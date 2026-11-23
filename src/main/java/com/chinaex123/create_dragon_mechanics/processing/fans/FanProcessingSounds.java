@@ -1,4 +1,4 @@
-package com.chinaex123.create_iceandfire.processing.fans;
+package com.chinaex123.create_dragon_mechanics.processing.fans;
 
 import com.iafenvoy.iceandfire.registry.IafSounds;
 import net.minecraft.core.BlockPos;
